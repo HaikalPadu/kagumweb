@@ -14,12 +14,12 @@ export type Service = {
 const px = (id: number, w = 1600) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
 
 export const images = {
-  hero: px(3184465, 2000),
+  hero: "/assets/gambarmain.jpg",
   about: px(3184418),
-  team: px(3184360),
+  team: "/assets/gambarhrdcclaimmable.jpg",
   career: px(3184291),
   contact: px(3182812),
-  training: px(1181406),
+  training: "/assets/gambarhrdctrainingprovider.jpg",
 };
 
 export const services: Service[] = [
@@ -31,7 +31,7 @@ export const services: Service[] = [
     description:
       "As a registered HRD Corp training provider, Kagum delivers practical programmes across entrepreneurship, leadership, digital skills, technology and more — designed to create measurable workplace impact.",
     points: ["50+ courses across modern business skills", "Practical, hands-on skills development", "Networking with professionals and industry experts", "HRD Corp claimable for eligible employers"],
-    image: px(1181406),
+    image: "/assets/gambarhrdctrainingprovider.jpg",
   },
   {
     id: "digital",
@@ -41,7 +41,7 @@ export const services: Service[] = [
     description:
       "Kagum Digital helps ambitious businesses grow online through strategic social media management, digital advertising, content production and website development.",
     points: ["Social media management", "Digital advertising campaigns", "Content creation and videography", "Website design and development"],
-    image: px(196644),
+    image: "/assets/gambardigitalservices.jpg",
   },
   {
     id: "it",
@@ -51,7 +51,7 @@ export const services: Service[] = [
     description:
       "From system integration to software needs, our IT consultants help organisations build efficient and reliable technology infrastructure.",
     points: ["IT solutions and integration", "Software and system requirements", "Efficient technology infrastructure", "Ongoing advisory and support"],
-    image: px(1181467),
+    image: "/assets/gambaritconsultant.jpg",
   },
   {
     id: "supply",
@@ -61,7 +61,7 @@ export const services: Service[] = [
     description:
       "Kagum Supplies provides dependable sourcing, trading and delivery of quality products for organisations across the public and private sectors.",
     points: ["Supply and trading of products", "Seamless sourcing and distribution", "High-quality, on-time delivery", "Government and corporate procurement"],
-    image: px(4481259),
+    image: "/assets/gambarsupplyandtrading.jpg",
   },
   {
     id: "prosilat",
@@ -71,7 +71,7 @@ export const services: Service[] = [
     description:
       "Akademi ProSilat is Kagum's community initiative that develops discipline, confidence and self-defence skills through the heritage of silat.",
     points: ["Silat training for all age groups", "Community and youth development", "Self-defence programmes for women", "Collaboration-led programmes"],
-    image: px(7045426),
+    image: "/assets/gambarsilat.jpg",
   },
 ];
 
