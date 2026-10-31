@@ -15,9 +15,9 @@ const px = (id: number, w = 1600) => `https://images.pexels.com/photos/${id}/pex
 
 export const images = {
   hero: "/assets/gambarmain.jpg",
-  about: px(3184418),
+  about: "/assets/gambarmain.jpg",
   team: "/assets/gambarhrdcclaimmable.jpg",
-  career: px(3184291),
+  career: "/assets/gambarcareer.jpg",
   contact: px(3182812),
   training: "/assets/gambarhrdctrainingprovider.jpg",
 };

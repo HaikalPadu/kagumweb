@@ -4,7 +4,7 @@ import { Container, PageBanner } from "@/src/components/ui-kit";
 import { images } from "@/src/data/content";
 
 // Replace this path (or add the file at this location) when the hiring poster is ready.
-const careerPoster = "/assets/career-poster.jpg";
+const careerPoster = "/assets/gambarposter.jpg";
 
 export default function Career() {
   const [posterMissing, setPosterMissing] = useState(false);
