@@ -122,11 +122,10 @@ export default function Home() {
           <SectionTitle center eyebrow="The Kagum group" title="Our brands" />
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             {brands.map((b) => (
-              <div key={b.name} className="flex flex-col items-center rounded-lg border border-slate-200 p-10 text-center transition hover:border-brand">
-                <img src={b.logo} alt={b.name} className="h-24 w-auto object-contain" />
-                <h3 className="heading mt-6 text-xl">{b.name}</h3>
-                <p className="mt-2 text-sm text-slate-500">{b.text}</p>
-              </div>
+              <article key={b.name} className="overflow-hidden rounded-lg border border-slate-200 bg-white text-center transition hover:border-brand hover:shadow-lg">
+                <a href={b.poster} target="_blank" rel="noreferrer" aria-label={`View full-size ${b.name} poster`} className="block"><img src={b.poster} alt={`${b.name} services and company poster`} loading="lazy" className="h-auto w-full object-contain" /></a>
+                <div className="px-6 py-7"><h3 className="heading text-xl">{b.name}</h3><p className="mt-3 text-sm text-slate-500">{b.text}</p><div className="mt-5 flex flex-wrap justify-center gap-4 text-sm font-semibold text-brand"><a href={b.poster} target="_blank" rel="noreferrer">View full-size poster ↗</a><a href={b.original} target="_blank" rel="noreferrer">View original ↗</a></div></div>
+              </article>
             ))}
           </div>
         </Container>
