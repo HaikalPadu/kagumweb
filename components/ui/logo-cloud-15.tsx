@@ -7,7 +7,7 @@ type LogoCloudProps = { logos: CloudLogo[]; title?: string; titleSuffix?: string
 
 // Each 160px logo has 48px of breathing room. Keep speed independent of logo count.
 const LOGO_STEP = 208;
-const PIXELS_PER_SECOND = 40;
+const PIXELS_PER_SECOND = 50;
 
 export default function LogoCloud({ logos, title = "Trusted by & collaborating with", titleSuffix = "leading organisations" }: LogoCloudProps) {
   if (!logos.length) return null;
