@@ -1,1 +1,1 @@
-export { default } from "../server/mail";
+export { default } from "../server/mail.js";
