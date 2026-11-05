@@ -30,9 +30,9 @@ label input:focus, label select:focus, label textarea:focus { border-color: var(
 a:focus-visible, button:focus-visible { outline: 3px solid rgb(200 16 46 / .4); outline-offset: 3px; }
 
 /* Motion */
-.collaborator-track { display:flex; width:max-content; animation:collaborator-slide var(--logo-duration,720s) linear infinite; }
-.collaborator-group { display:flex; align-items:center; gap:2rem; padding-right:2rem; }
-.collaborator-fade { mask-image:linear-gradient(to right,transparent,#000 10%,#000 90%,transparent); }
+.collaborator-track { display:flex; width:max-content; animation:collaborator-slide var(--logo-duration,156s) linear infinite; }
+.collaborator-group { display:flex; align-items:center; gap:48px; padding-right:48px; }
+.collaborator-fade { mask-image:linear-gradient(to right,transparent,#000 4%,#000 96%,transparent); }
 @keyframes collaborator-slide { from { transform:translateX(0); } to { transform:translateX(-50%); } }
 /* logo-cloud-15 marquee */
 .animate-marquee {
@@ -57,9 +57,8 @@ a:focus-visible, button:focus-visible { outline: 3px solid rgb(200 16 46 / .4); 
 @keyframes fade-up { from { opacity: 0; transform: translateY(24px); } }
 
 @media (prefers-reduced-motion: reduce) {
-  .collaborator-slider { overflow-x:auto; }
-  .collaborator-track { animation:none; transform:none; }
-  .collaborator-group[aria-hidden="true"] { display:none; }
+  /* Preserve the requested autoplay, at half speed when reduced motion is enabled. */
+  .collaborator-track { animation:collaborator-slide calc(var(--logo-duration,156s) * 2) linear infinite !important; }
   .section-reveal { opacity: 1; transform: none; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }
