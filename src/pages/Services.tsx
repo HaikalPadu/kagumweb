@@ -3,25 +3,25 @@ import { Link } from "@/src/router";
 import { ButtonLink, Container, CtaBand, PageBanner } from "@/src/components/ui-kit";
 import { images, services } from "@/src/data/content";
 import { serviceIcons } from "@/src/pages/Home";
+import Academy from "./Academy";
 import DigitalMarketing from "./DigitalMarketing";
 
 export function Services() {
   return (
     <main>
-      <PageBanner eyebrow="Our services" title={<>Everything you need <span className="text-brand-light">to move forward.</span></>} text="Training, digital, technology, supply and community — delivered by one connected team." image={images.training} />
+      <PageBanner eyebrow="Our services" title={<>Everything you need <span className="text-brand-light">to move forward.</span></>} text="Kagum Academy, Kagum Digital and Kagum Supplies — delivered by one connected team." image={images.training} />
       <section className="py-24">
         <Container className="grid gap-20">
           {services.map((s, i) => {
-            const Icon = serviceIcons[s.id];
             return (
               <article key={s.id} className="grid items-center gap-12 lg:grid-cols-2">
                 <img src={s.image} alt={s.title} loading="lazy" className={`h-[420px] w-full rounded-lg object-cover ${i % 2 ? "lg:order-2" : ""}`} />
                 <div>
                   <div className="flex items-center gap-4">
-                    <span className="grid h-14 w-14 place-items-center rounded-md bg-brand text-white"><Icon size={26} /></span>
-                    <span className="heading text-5xl text-slate-200">0{i + 1}</span>
+                    <span className="heading text-5xl text-brand">0{i + 1}</span>
+                    <img src={s.id === "training-provider" ? "/assets/kagum-academy-logo.png" : s.id === "digital" ? "/assets/kagum-digital-updated.png" : "/assets/kagum-supplies-updated.png"} alt={s.title} className={s.id === "training-provider" ? "h-24 w-28 object-contain" : "h-20 w-56 max-w-[65%] object-cover"} />
                   </div>
-                  <p className="mt-6 text-xs font-bold uppercase tracking-widest text-brand">{s.eyebrow}</p>
+                    <p className="mt-6 text-xs font-bold uppercase tracking-widest text-brand">{s.eyebrow}</p>
                   <h2 className="heading mt-2 text-4xl">{s.title}</h2>
                   <p className="mt-4 text-lg leading-relaxed text-slate-600">{s.description}</p>
                   <ul className="mt-6 grid gap-3 sm:grid-cols-2">
@@ -40,6 +40,7 @@ export function Services() {
 }
 
 export function ServiceDetail({ id }: { id: string }) {
+  if (id === "training-provider") return <Academy />;
   if (id === "digital") return <DigitalMarketing />;
   const s = services.find((x) => x.id === id);
   if (!s) return <NotFound />;

@@ -1,3 +1,4 @@
+import EnquiryForm from "@/src/components/EnquiryForm";
 import { useState } from "react";
 import { ImagePlus, CalendarDays } from "lucide-react";
 import { Container, PageBanner } from "@/src/components/ui-kit";
@@ -24,6 +25,6 @@ export default function Career() {
       <div className="mt-20"><p className="text-xs font-bold uppercase tracking-widest text-brand">Join our team</p><h2 className="heading mt-4 text-3xl sm:text-4xl">Positions we offer</h2>
         <div className="mt-10 grid items-start gap-8 lg:grid-cols-3">{positions.map((position) => <article key={position.title} className="overflow-hidden rounded-xl border border-slate-200 bg-white transition-shadow duration-300 hover:shadow-lg"><div className="border-b border-slate-200 p-6"><h3 className="heading text-2xl">{position.title}</h3><p className="mt-3 text-sm font-medium text-brand">Applications open in December</p></div><Poster src={position.poster} title={position.title} /></article>)}</div>
       </div>
-    </Container></section>
+    </Container></section><section className="pb-20"><Container><EnquiryForm kind="career" /></Container></section>
   </main>;
 }

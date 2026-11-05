@@ -7,7 +7,6 @@ import { contact, services } from "@/src/data/content";
 const nav = [
   { to: "/", label: "Home" },
   { to: "/services", label: "Services" },
-  { to: "/training", label: "Training" },
   { to: "/about", label: "About" },
   { to: "/career", label: "Career" },
 ];
@@ -60,8 +59,8 @@ export default function Layout({ path, children }: { path: string; children: Rea
       <header className={`sticky top-0 z-50 bg-white transition-shadow ${scrolled ? "shadow-[0_6px_30px_rgba(15,23,42,.08)]" : "border-b border-slate-100"}`}>
         <Container className="flex h-20 items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
-            <img src="/assets/kagum-academy-logo.png" alt="Kagum Advance" className="h-12 w-auto" />
-            <span className="heading text-lg leading-none">KAGUM<span className="block text-xs font-bold tracking-[.3em] text-brand">ADVANCE</span></span>
+            <img src="/assets/kagum-group-logo.png" alt="Kagum Advance" className="h-12 w-auto" />
+            <span className="heading text-lg leading-none">KAGUM<span className="block text-xs font-bold tracking-[.3em] text-brand">ADVANCE GROUP</span></span>
           </Link>
           <nav className="hidden items-center gap-8 lg:flex">
             {nav.map((n) => (
@@ -88,10 +87,10 @@ export default function Layout({ path, children }: { path: string; children: Rea
         <Container className="grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center gap-3 text-white">
-              <img src="/assets/kagum-academy-logo.png" alt="" className="h-12 w-auto rounded bg-white p-1" />
-              <span className="heading text-lg leading-none">KAGUM<span className="block text-xs tracking-[.3em] text-brand-light">ADVANCE</span></span>
+              <img src="/assets/kagum-group-logo.png" alt="" className="h-12 w-auto rounded bg-white p-1" />
+              <span className="heading text-lg leading-none">KAGUM<span className="block text-xs tracking-[.3em] text-brand-light">ADVANCE GROUP</span></span>
             </div>
-            <p className="mt-5 text-sm leading-relaxed">Capability, adaptability and scalability for people and organisations ready to move forward.</p>
+            <p className="mt-5 text-sm font-semibold">KAGUM ADVANCE GROUP SDN. BHD.<br />202201014029 (1459726-U)</p><p className="mt-5 text-sm leading-relaxed">Capability, adaptability and scalability for people and organisations ready to move forward.</p>
             <div className="mt-5 text-white"><Socials size={18} /></div>
           </div>
           <FooterCol title="Services">{services.map((s) => <Link key={s.id} to={`/services/${s.id}`} className="hover:text-white">{s.title}</Link>)}</FooterCol>

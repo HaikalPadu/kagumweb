@@ -22,7 +22,7 @@ export const images = {
   training: "/assets/enhanced/gambarhrdctrainingprovider.png",
 };
 
-export const services: Service[] = [
+const originalServices: Service[] = [
   {
     id: "training-provider",
     eyebrow: "People & Performance",
@@ -74,6 +74,8 @@ export const services: Service[] = [
     image: "/assets/enhanced/gambarsilat.png",
   },
 ];
+
+export const services: Service[] = originalServices.filter(s => ["training-provider","digital","supply"].includes(s.id)).map(s => ({...s, title: s.id === "training-provider" ? "Kagum Academy" : s.id === "digital" ? "Kagum Digital" : "Kagum Supplies", image: s.id === "digital" ? "/assets/digital-updated.png" : s.id === "supply" ? "/assets/supplies-updated.png" : s.image }));
 
 export const courseTracks: Record<string, string[]> = {
   Entrepreneurship: ["Kursus Asas Keusahawanan", "Social Entrepreneur", "Asas Pengurusan Kewangan Perniagaan", "Business Model Canvas (Beginner)", "Etika Perniagaan", "Rancangan Perniagaan for Startup", "Revolusi Industri 4.0 (Asas)"],

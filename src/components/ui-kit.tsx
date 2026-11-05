@@ -35,10 +35,10 @@ export function SectionTitle({ eyebrow, title, text, center = false }: { eyebrow
   );
 }
 
-export function PageBanner({ eyebrow, title, text, image }: { eyebrow: string; title: ReactNode; text: string; image: string }) {
+export function PageBanner({ eyebrow, title, text, image, video }: { eyebrow: string; title: ReactNode; text: string; image: string; video?: string }) {
   return (
     <section className="relative overflow-hidden bg-ink text-white">
-      <img src={image} alt="" className="absolute inset-0 h-full w-full object-cover opacity-35" />
+      {video ? <video src={video} poster={image} autoPlay muted loop playsInline preload="metadata" tabIndex={-1} aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full object-cover" /> : <img src={image} alt="" className="absolute inset-0 h-full w-full object-cover opacity-35" />}
       <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-transparent" />
       <Container className="relative py-24 md:py-32">
         <Eyebrow light>{eyebrow}</Eyebrow>
