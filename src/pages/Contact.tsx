@@ -10,7 +10,7 @@ export default function Contact() {
   const { submit, pending, status, sent } = useApplication("Contact enquiry");
 
   const items = [
-    { icon: Phone, title: "Call us", lines: [contact.phone], href: contact.phoneHref },
+    { icon: Phone, title: "WhatsApp us", lines: [contact.phone], href: contact.phoneHref },
     { icon: Mail, title: "Email us", lines: [contact.email], href: `mailto:${contact.email}` },
     { icon: MapPin, title: "Head office", lines: contact.hq },
     { icon: MapPin, title: "Branch", lines: contact.branch },

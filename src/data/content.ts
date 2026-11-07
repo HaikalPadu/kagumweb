@@ -151,7 +151,7 @@ export const roles = [
 export const contact = {
   email: "info@kagum.co",
   phone: "011-3969 9786",
-  phoneHref: "tel:+601139699786",
+  phoneHref: "https://wa.me/601139699786",
   hq: ["No. 34-01, Jalan Pulai Makmur 5/1,", "Bandar Baru Kangkar Pulai,", "81300 Johor Bahru, Johor."],
   branch: ["J 8837 Batu 15, Sungai Renggei,", "77300 Merlimau, Melaka."],
   mapQuery: "No. 34-01, Jalan Pulai Makmur 5/1, Bandar Baru Kangkar Pulai, 81300 Johor Bahru, Johor",
