@@ -1,4 +1,5 @@
 import DigitalApplication from "@/src/components/DigitalApplication";
+import { FormGraphic } from "@/src/components/SectionGraphics";
 import { Container, PageBanner, SectionTitle } from "@/src/components/ui-kit";
 import WixContactDetails from "@/src/components/WixContactDetails";
 import { services } from "@/src/data/content";
@@ -22,7 +23,7 @@ export default function DigitalMarketing() {
     <div className="mt-16 grid gap-8 md:grid-cols-3">{[["Improve brand visibilities", "Help people find your products with ads that appear in related results and brand pages."], ["Reach new followers", "Make your brand or services stand out with engaging creative formats."], ["Sell your image with efficiency", "By using keywords to appear in relevant results, you can engage viewers who have yet to discover your brand."]].map(([title, text]) => <article key={title}><h3 className="heading text-xl">{title}</h3><p className="mt-4 leading-relaxed text-slate-600">{text}</p></article>)}</div></Container></section>
     <section className="bg-slate-50 py-20"><Container><SectionTitle eyebrow="OUR" title="SERVICES" /><div className="mt-10 grid gap-6 md:grid-cols-2">{offers.map((offer) => <article key={offer.title} className="rounded-xl bg-white p-8"><h3 className="heading text-2xl">{offer.title}</h3><p className="mt-3 text-sm leading-relaxed text-slate-500">{offer.subtitle}</p><p className="mt-8 text-xs font-bold tracking-widest">AS LOW AS</p><p className="heading mt-2 text-5xl text-brand">{offer.price}<span className="ml-2 text-xl">+</span></p><p className="mt-4 text-xs font-bold leading-relaxed">{offer.note}</p></article>)}</div></Container></section>
     <section className="py-20"><Container><SectionTitle eyebrow="PACKAGE PRICING" title="SOCIAL MEDIA MANAGEMENT" /><Packages items={socialPackages} /><div className="mt-20"><SectionTitle eyebrow="PACKAGE PRICING" title="CONTENT CREATION" /><Packages items={contentPackages} /></div></Container></section>
-    <section className="bg-ink py-20"><Container><div className="mx-auto max-w-2xl rounded-xl bg-white p-8 md:p-12"><h2 className="heading text-3xl">APPLY SERVICES HERE!</h2><DigitalApplication /></div></Container></section>
+    <section className="bg-ink py-20"><Container><div className="form-panel mx-auto max-w-2xl rounded-xl bg-white p-8 md:p-12"><FormGraphic kind="digital" /><h2 className="heading text-3xl">APPLY SERVICES HERE!</h2><DigitalApplication /></div></Container></section>
     <WixContactDetails />
   </main>;
 }

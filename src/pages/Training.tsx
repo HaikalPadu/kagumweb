@@ -44,8 +44,8 @@ export default function Training() {
                 <h2 className="heading flex items-center gap-3 border-b-2 border-brand pb-3 text-2xl">{g.track}<span className="text-sm font-bold text-slate-400">{g.courses.length}</span></h2>
                 <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
                   {g.courses.map((c) => (
-                    <div key={c} className="group flex gap-4 rounded-lg border border-slate-200 p-5 transition hover:border-brand hover:shadow-md">
-                      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-md bg-red-50 text-brand transition group-hover:bg-brand group-hover:text-white"><BookOpen size={18} /></span>
+                    <div key={c} className="flex gap-4 rounded-lg border border-slate-200 bg-white p-5">
+                      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-md bg-red-50 text-brand"><BookOpen size={18} /></span>
                       <div>
                         <h3 className="font-bold leading-snug">{c}</h3>
                         <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-slate-400">HRDC claimable</p>

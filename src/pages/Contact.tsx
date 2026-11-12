@@ -1,4 +1,5 @@
 import useApplication from "@/src/components/useApplication";
+import { FormGraphic } from "@/src/components/SectionGraphics";
 import { useState } from "react";
 import { CheckCircle2, Clock, Mail, MapPin, Phone, Send } from "lucide-react";
 import { Container, PageBanner } from "@/src/components/ui-kit";
@@ -35,7 +36,8 @@ export default function Contact() {
                 : <div key={title} className="flex gap-4 rounded-lg border border-slate-200 p-5">{inner}</div>;
             })}
           </div>
-          <form onSubmit={submit} className="rounded-lg bg-slate-50 p-8 md:p-12">
+          <form onSubmit={submit} className="form-panel rounded-lg bg-slate-50 p-8 md:p-12">
+            <FormGraphic />
             <h2 className="heading text-3xl">Send us a message</h2>
             <p className="mt-2 text-slate-600">Send your enquiry directly to info@kagum.co.</p>
             <div className="mt-8 grid gap-5 md:grid-cols-2">
@@ -44,7 +46,7 @@ export default function Contact() {
               <label>Email *<input name="email" defaultValue={draft?.email} type="email" required placeholder="you@company.com" /></label>
               <label>Phone<input name="phone" defaultValue={draft?.phone} type="tel" placeholder="01X-XXX XXXX" /></label>
             </div>
-            <label className="mt-5">I'm interested in<select name="topic" defaultValue={draft?.topic}>{services.map((s) => <option key={s.id}>{s.title}</option>)}<option>Career enquiry</option><option>Programme registration</option><option>Other</option></select></label>
+            <label className="mt-5">I'm interested in<select name="topic" defaultValue={draft?.topic}>{services.map((s) => <option key={s.id}>{s.title}</option>)}<option>Programme registration</option><option>Other</option></select></label>
             <label className="mt-5">Message *<textarea name="message" defaultValue={draft?.message} required rows={5} placeholder="Tell us a little about what you need..." /></label>
             {sent ? (
               <div className="mt-6 flex gap-3 rounded-md bg-green-50 p-4 font-semibold text-green-800"><CheckCircle2 className="shrink-0" />Your enquiry has been sent to info@kagum.co.</div>

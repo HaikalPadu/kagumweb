@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "project": {
+    "name": "kagum-advance-local",
+    "productType": null,
+    "stack": [
+      "react",
+      "tailwind-v4",
+      "vite"
+    ]
+  },
+  "sources": {
+    "tokens": [
+      "src/index.css"
+    ],
+    "components": [
+      "components/ui"
+    ],
+    "assets": [
+      "public/assets",
+      "assets"
+    ],
+    "instructions": []
+  },
+  "design": {
+    "colorMode": "light",
+    "colors": {
+      "--color-brand": {
+        "value": "#c8102e",
+        "source": "src/index.css"
+      },
+      "--color-brand-dark": {
+        "value": "#a00d25",
+        "source": "src/index.css"
+      },
+      "--color-brand-light": {
+        "value": "#ff4d5e",
+        "source": "src/index.css"
+      },
+      "--color-ink": {
+        "value": "#0f172a",
+        "source": "src/index.css"
+      }
+    },
+    "typography": {
+      "--font-sans": {
+        "value": "\"Inter\", ui-sans-serif, system-ui, sans-serif",
+        "source": "src/index.css"
+      }
+    },
+    "spacing": {},
+    "radius": {},
+    "shadows": {},
+    "motion": {},
+    "density": "unknown"
+  },
+  "components": {
+    "installed": [
+      "card-deck-carousel",
+      "hero-01",
+      "logo-cloud-15",
+      "logo-cloud-15-utils",
+      "polaroid-line-carousel",
+      "tabs",
+      "tabs-utils"
+    ],
+    "preferredPrimitives": [
+      "radix-ui"
+    ],
+    "patterns": []
+  },
+  "constraints": {
+    "must": [],
+    "avoid": []
+  },
+  "decisions": [
+    "Use category line icons, small graphic accents and consistent white surfaces for programme cards.",
+    "Static information cards must not change colour or gain hover shadows that imply clickability.",
+    "Application forms share a brand-red top rule and a decorative icon header; preserve readable fields and existing submission behaviour."
+  ],
+  "evidence": [
+    {
+      "fact": "components.installed",
+      "source": "components/ui"
+    },
+    {
+      "fact": "design.colorMode:light",
+      "source": "src/index.css"
+    },
+    {
+      "fact": "design.tokens",
+      "source": "src/index.css"
+    },
+    {
+      "fact": "project.stack:react",
+      "source": "package.json"
+    },
+    {
+      "fact": "project.stack:tailwind-v4",
+      "source": "package.json"
+    },
+    {
+      "fact": "project.stack:vite",
+      "source": "package.json"
+    }
+  ],
+  "generatedAt": "2026-11-12T09:10:34.311Z"
+}
