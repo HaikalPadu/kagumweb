@@ -50,13 +50,6 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* Partners logo cloud (logo-cloud-15) */}
-      <section className="pt-24">
-        <Container>
-          <LogoCloud logos={partners} />
-        </Container>
-      </section>
-
       {/* Services */}
       <section className="py-24">
         <Container>
@@ -131,6 +124,12 @@ export default function Home() {
         </Container>
       </section>
 
+      {/* Partners above the capability call to action */}
+      <div className="py-12">
+        <Container>
+          <LogoCloud logos={partners} />
+        </Container>
+      </div>
       <CtaBand />
     </main>
   );

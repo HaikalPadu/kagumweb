@@ -32,6 +32,8 @@ a:focus-visible, button:focus-visible { outline: 3px solid rgb(200 16 46 / .4); 
 /* Motion */
 .collaborator-track { display:flex; width:max-content; animation:collaborator-slide var(--logo-duration,156s) linear infinite; }
 .collaborator-group { display:flex; align-items:center; gap:48px; padding-right:48px; }
+.collaborator-logo { display:block; width:96px; height:96px; object-fit:contain; border-radius:50%; }
+@media (min-width:640px) { .collaborator-logo { width:112px; height:112px; } }
 .collaborator-fade { mask-image:linear-gradient(to right,transparent,#000 4%,#000 96%,transparent); }
 @keyframes collaborator-slide { from { transform:translateX(0); } to { transform:translateX(-50%); } }
 /* logo-cloud-15 marquee */
