@@ -3,6 +3,7 @@ import { Facebook, Instagram, Linkedin, Mail, MapPin, Menu, Phone, X } from "luc
 import { Link } from "@/src/router";
 import { Container } from "@/src/components/ui-kit";
 import { contact, services } from "@/src/data/content";
+import RandomLetterSwapNav from "@/components/ui/m-random-letter-swap-1";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -11,7 +12,6 @@ const nav = [
   { to: "/career", label: "Career" },
 ];
 
-const isActive = (path: string, to: string) => (to === "/" ? path === "/" : path.startsWith(to));
 
 export default function Layout({ path, children }: { path: string; children: ReactNode }) {
   const [open, setOpen] = useState(false);
@@ -62,22 +62,13 @@ export default function Layout({ path, children }: { path: string; children: Rea
             <img src="/assets/kagum-group-logo.png" alt="Kagum Advance" className="h-12 w-auto" />
             <span className="heading text-lg leading-none">KAGUM<span className="block text-xs font-bold tracking-[.3em] text-brand">ADVANCE GROUP</span></span>
           </Link>
-          <nav className="hidden items-center gap-8 lg:flex">
-            {nav.map((n) => (
-              <Link key={n.to} to={n.to} className={`relative py-2 text-sm font-bold uppercase tracking-wider transition hover:text-brand ${isActive(path, n.to) ? "text-brand after:absolute after:inset-x-0 after:-bottom-[25px] after:h-[3px] after:bg-brand" : "text-ink"}`}>{n.label}</Link>
-            ))}
-            <Link to="/contact" className="rounded-md bg-brand px-5 py-3 text-sm font-bold uppercase tracking-wider text-white transition hover:bg-brand-dark">Contact us</Link>
-          </nav>
-          <button aria-label="Toggle menu" className="rounded-md border border-slate-200 p-2 lg:hidden" onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</button>
+          <RandomLetterSwapNav path={path} />
+          <button aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation" className="rounded-md border border-slate-200 p-2 lg:hidden" onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</button>
         </Container>
         {open && (
-          <nav className="border-t border-slate-100 bg-white lg:hidden">
-            <Container className="grid py-3">
-              {[...nav, { to: "/contact", label: "Contact us" }].map((n) => (
-                <Link key={n.to} to={n.to} className={`border-b border-slate-100 py-4 font-bold uppercase tracking-wider ${isActive(path, n.to) ? "text-brand" : ""}`}>{n.label}</Link>
-              ))}
-            </Container>
-          </nav>
+          <div id="mobile-navigation" className="border-t border-slate-100 bg-white lg:hidden">
+            <Container><RandomLetterSwapNav path={path} mobile /></Container>
+          </div>
         )}
       </header>
 

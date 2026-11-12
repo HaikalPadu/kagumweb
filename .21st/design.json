@@ -77,7 +77,8 @@
     "Use category line icons, small graphic accents and consistent white surfaces for programme cards.",
     "Static information cards must not change colour or gain hover shadows that imply clickability.",
     "Application forms share a brand-red top rule and a decorative icon header; preserve readable fields and existing submission behaviour.",
-    "Pricing uses the supplied reference's segmented controls, bordered feature cards and slow border trail in Kagum red. Switch between real service categories, retain published package prices, and prefill enquiry selections."
+    "Pricing uses the supplied reference's segmented controls, bordered feature cards and slow border trail in Kagum red. Switch between real service categories, retain published package prices, and prefill enquiry selections.",
+    "Header links use the supplied random letter-swap navigation on hover and keyboard focus, retain Kagum navigation and colours, and respect system reduced motion."
   ],
   "evidence": [
     {
